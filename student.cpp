@@ -25,6 +25,6 @@ public:
 };
 int main()
 {
-    Student S1(23, 3323, "Mumu");
+    Student S1(23, 3323, "Mumu", 3.5);
     S1.show();
 }
