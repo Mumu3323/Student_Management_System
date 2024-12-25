@@ -25,7 +25,6 @@ float cgpa;
 
  }
 
-
 };
 int main()
 {
