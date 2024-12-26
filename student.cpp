@@ -4,12 +4,12 @@
 using namespace std;
 class Student
 {
-public:
+private:
 int id;
 int age;
 string name;
 string course;
-
+public:
  Student ( int i , int a, string n, string c)
  {
     id = i;
@@ -25,7 +25,12 @@ string course;
     cout<< "student Course:"<< course<< endl;
 
  }
-
+void displayDetails() const {
+        cout << id << "\t" << age << "\t" << name << "\t" << course << endl;
+    }
+const int MAX_STUDENTS = 100;
+Student students[MAX_STUDENTS];
+int studentCount = 0;
 };
 int main()
 {
