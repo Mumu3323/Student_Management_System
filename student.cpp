@@ -31,6 +31,13 @@ void displayDetails() const {
 const int MAX_STUDENTS = 100;
 Student students[MAX_STUDENTS];
 int studentCount = 0;
+void addStudent() 
+{
+  if (studentCount >= MAX_STUDENTS)
+     {
+    cout << "Student list is full! Cannot add more students.\n";
+    return;
+     }
 };
 int main()
 {
