@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<vector>
 using namespace std;
 class Student
 {
@@ -28,6 +27,11 @@ public:
 void displayDetails() const {
         cout << id << "\t" << age << "\t" << name << "\t" << course << endl;
     }
+int getId() const 
+ {
+  return id;
+ }
+};
 const int MAX_STUDENTS = 100;
 Student students[MAX_STUDENTS];
 int studentCount = 0;
@@ -38,9 +42,5 @@ void addStudent()
     cout << "Student list is full! Cannot add more students.\n";
     return;
      }
-};
-int main()
-{
-    Student S1 (23, 3323,"Mumu","Computer Science");
-    S1.show();
 }
+ 
