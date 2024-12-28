@@ -43,5 +43,21 @@ void addStudent()
     cout << "Student list is full! Cannot add more students.\n";
     return;
      }
+  int id, age;
+    string name, course;
+    cout <<"Enter Student ID: ";
+    cin >> id;
+    cin.ignore();  
+    cout <<"Enter Student Name: ";
+    getline(cin, name);
+    cout <<"Enter Student Age: ";
+    cin >> age;
+    cin.ignore();
+    cout <<"Enter Student Course: ";
+    getline(cin, course);
+
+    students[studentCount].show(id, name, age, course);
+    studentCount++;
+    cout << "Student added successfully!\n";
 }
  
