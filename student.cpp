@@ -9,6 +9,7 @@ int age;
 string name;
 string course;
 public:
+Student() : id(0), age(0), name(""), course("") {}
  Student ( int i , int a, string n, string c)
  {
     id = i;
