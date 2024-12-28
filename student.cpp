@@ -16,7 +16,7 @@ public:
     name = n;
     course = c;
  }
- void show()
+ void show(int i, int a, string n, string c)
  {
      cout<< "student Id:"<< id<< endl;
     cout<<"Student Age:"<<age<<endl;
