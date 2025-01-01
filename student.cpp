@@ -1,37 +1,15 @@
 #include<iostream>
 #include<string>
 using namespace std;
-class Student
-{
-private:
-int id;
-int age;
-string name;
-string course;
+ class Person {
+protected:
+    int id;
+    string name;
+    int age;
 public:
-Student() : id(0), age(0), name(""), course("") {}
- Student ( int i , int a, string n, string c)
- {
-    id = i;
-    age = a;
-    name = n;
-    course = c;
- }
- void show(int i, int a, string n, string c)
- {
-     cout<< "student Id:"<< id<< endl;
-    cout<<"Student Age:"<<age<<endl;
-    cout<<"Student Name: "<< name<< endl;
-    cout<< "student Course:"<< course<< endl;
-
- }
-void displayDetails() const {
-        cout << id << "\t" << age << "\t" << name << "\t" << course << endl;
-    }
-int getId() const 
- {
-  return id;
- }
+    Person() : id(0), age(0), name("") {}
+    Person(int i, string n, int a) : id(i), name(n), age(a) {}
+    virtual void show() const = 0;  
 };
 const int MAX_STUDENTS = 100;
 Student students[MAX_STUDENTS];
@@ -43,8 +21,8 @@ void addStudent()
     cout << "Student list is full! Cannot add more students.\n";
     return;
      }
-  int id, age;
-    string name, course;
+   int id, age;
+   string name, course;
     cout <<"Enter Student ID: ";
     cin >> id;
     cin.ignore();  
