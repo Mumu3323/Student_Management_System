@@ -73,3 +73,9 @@ void viewStudents() {
         students[i].displayDetails();
     }
 }
+// Function to search for a student by ID
+void searchStudent() {
+    if (studentCount == 0) {
+        cout << "No students available to search.\n";
+        return;
+    }
