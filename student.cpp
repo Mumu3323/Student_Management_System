@@ -61,8 +61,10 @@ void addStudent()
     studentCount++;
     cout << "Student added successfully!\n";
 }
-void viewStudents() {
-    if (studentCount == 0) {
+void viewStudents() 
+{
+    if (studentCount == 0) 
+    {
         cout << "No students to display.\n";
         return;
     }
@@ -74,8 +76,26 @@ void viewStudents() {
     }
 }
 // Function to search for a student by ID
-void searchStudent() {
-    if (studentCount == 0) {
+void searchStudent() 
+{
+    if (studentCount == 0) 
+    {
         cout << "No students available to search.\n";
         return;
     }
+     int searchId;
+    cout << "Enter Student ID to search: ";
+    cin >> searchId;
+
+    for (int i = 0; i < studentCount; i++) {
+        if (students[i].getId() == searchId) {
+            cout << "Student Found:\n";
+            cout << "ID\tName\t\tAge\tCourse\n";
+            cout << "-----------------------------------------\n";
+            students[i].show(); // Polymorphism in action
+            return;
+        }
+    }
+    cout << "Student with ID " << searchId << " not found.\n";
+}
+
