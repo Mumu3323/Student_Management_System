@@ -61,3 +61,15 @@ void addStudent()
     studentCount++;
     cout << "Student added successfully!\n";
 }
+void viewStudents() {
+    if (studentCount == 0) {
+        cout << "No students to display.\n";
+        return;
+    }
+
+    cout << "ID\tName\t\tAge\tCourse\n";
+    cout << "-----------------------------------------\n";
+    for (int i = 0; i < studentCount; i++) {
+        students[i].displayDetails();
+    }
+}
