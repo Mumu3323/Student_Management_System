@@ -25,15 +25,19 @@ public:
     cout<< "student Course:"<< course<< endl;
 
  }
-void displayDetails() const {
-        cout << id << "\t" << age << "\t" << name << "\t" << course << endl;
+ 
+
+ void viewStudents() {
+    if (studentCount == 0) {
+        cout << "No students to display.\n";
+        return;
+    } 
+
+    cout << "ID\tName\t\tAge\tCourse\n";
+    cout << "-----------------------------------------\n";
+    for (int i = 0; i < studentCount; i++) {
+        students[i].displayDetails();
     }
-const int MAX_STUDENTS = 100;
-Student students[MAX_STUDENTS];
-int studentCount = 0;
-};
-int main()
-{
-    Student S1 (23, 3323,"Mumu","Computer Science");
-    S1.show();
 }
+};
+ 
